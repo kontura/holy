@@ -7,7 +7,7 @@
         {{- partial "prose.html" . -}}
     </article>
     <ul>
-        {{- range where site.RegularPages "Type" "in" site.Params.mainSections }}
+        {{- range.Pages }}
             {{- if not .Params.hidden }}
                 <li>
                     <div class="mb:16 py:24 f:fade-30 f:fade-10:hover transition:150ms;ease-in">
