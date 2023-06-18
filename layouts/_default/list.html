@@ -14,7 +14,9 @@
                         <a class="f:24 font:semibold" href="{{ .Permalink }}">
                             <div>{{ .Title }}</div>
                         </a>
-                        <div class="mt:12 f:fade-70"><time>{{ .Date | time.Format (":date_medium") }}</time></div>
+                        {{- if .Date }}
+                            <div class="mt:12 f:fade-70"><time>{{ .Date | time.Format (":date_medium") }}</time></div>
+                        {{- end }}
                     </div>
                 </li>
             {{- end }}
